@@ -1,0 +1,18 @@
+# Ambientes Virtuais (Nunca subir para o GitHub)
+ambiente_buddy/
+venv/
+env/
+
+# Arquivos de Cache do Python
+__pycache__/
+*.pyc
+
+# Arquivos de Áudio e Modelos de Voz (Pesados Demais e Direitos Autorais)
+*.wav
+*.mp3
+*.pth
+*.index
+
+# Pastas de Download do XTTS/Coqui (Se a IA baixar modelos locais)
+tts_models/
+*.json
