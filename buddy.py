@@ -29,7 +29,7 @@ print("2. Conectando ao Cérebro (Ollama / Llama 3)...")
 ollama.generate(model='llama3', prompt='Apenas diga "ok"')
 
 print("\n=======================================================")
-print("✅ VEIGAR ONLINE! Pressione [Ctrl + ;] para INICIAR a gravação.")
+print("✅ Buddy ONLINE! Pressione [Ctrl + ;] para INICIAR a gravação.")
 print("   (Para encerrar o assistente, clique no terminal e aperte Ctrl+C)")
 print("=======================================================\n")
 
@@ -63,24 +63,18 @@ while True:
     
     if texto_falado != "":
         print(f"Você: {texto_falado}")
-        print("🧠 Veigar pensando...")
+        print("🧠 Buddy pensando...")
         
         # A sua instrução de personalidade, mas bloqueando os símbolos para o leitor de voz não bugar
         prompt_personalidade = (
-            "Assuma a personalidade de Veigar, o Mestre do Mal do jogo League of Legends. "
-            "Você é um feiticeiro megalomaníaco, dramático e extremamente arrogante. "
-            "Você acredita ser a entidade mais diabólica de Runeterra, mas suas ameaças exageradas costumam soar cômicas. "
-            "Você odeia profundamente que façam piadas sobre sua altura ou chamem você de pequeno, ficando furioso com isso. "
-            "Trate o usuário como um mero mortal insignificante, um lacaio ou um alvo da sua magia negra. "
-            "Mantenha a resposta curta, direta e vilanesca. "
-            "REGRA ESTRITA: NUNCA use asteriscos, negrito, emojis, aspas, parênteses ou caracteres especiais. Use apenas letras comuns e pontuação básica (pontos e vírgulas). "
-            f"O mortal disse o seguinte, responda em português: {texto_falado}"
+            "Descreva a personalidade "
+            f"O usuário disse o seguinte, responda em português: {texto_falado}"
         )
         
         resposta = ollama.generate(model='llama3', prompt=prompt_personalidade)
         texto_resposta = resposta['response']
         
-        print(f"Veigar: {texto_resposta}")
+        print(f"Buddy: {texto_resposta}")
         
         # --- A Mágica da Voz Realista ---
         arquivo_mp3 = f"resposta_{int(time.time())}.mp3"
