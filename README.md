@@ -8,7 +8,7 @@ This project evolved to eliminate audio routing bottlenecks (such as relying on 
 2. **Coqui XTTSv2:** Clones any character's voice from a simple 5-second reference audio, generating speech with emotion directly within Python.
 
 ## Requirements
-* Python 3.10 or 3.11 (Avoid super recent versions like 3.14 due to PyTorch compatibility).
+* Python 3.10 or 3.11 (Avoid super recent versions like 3.14 if you want to use PyTorch).
 * Nvidia Graphics Card (Tested on a 16GB VRAM GPU).
 * Ollama installed and running locally.
 
